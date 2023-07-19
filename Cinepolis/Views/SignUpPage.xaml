@@ -1,0 +1,20 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Cinepolis.SignUpPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" VerticalOptions="Start">
+             
+               
+                <Label Text="Crea tu cuenta" FontSize="16" HorizontalOptions="Center" Margin="0,0,0,10" />
+            </StackLayout>
+            <StackLayout VerticalOptions="FillAndExpand">
+               
+            </StackLayout>
+            <StackLayout VerticalOptions="End">
+                <Label Text="¿Ya tienes una cuenta?" FontSize="16" HorizontalOptions="Center" Margin="0,0,0,10" />
+                <Button Text="Iniciar sesión" Clicked="OnSignInLinkClicked" BackgroundColor="Transparent" TextColor="#152567" BorderColor="#152567" BorderWidth="1" BorderRadius="5" Margin="0,0,0,20" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
