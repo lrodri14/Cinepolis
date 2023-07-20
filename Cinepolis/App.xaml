@@ -9,7 +9,8 @@
                 <Setter Property="HeightRequest" Value="20" />
                 <Setter Property="Margin" Value="0,0,0,5" />
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="TextColor" Value="Black" />
             </Style>
         </ResourceDictionary>
     </Application.Resources>
