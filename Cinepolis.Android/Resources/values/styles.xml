@@ -14,5 +14,12 @@
     <!-- colorAccent is used as the default value for colorControlActivated
          which is used to tint widgets -->
     <!--<item name="colorAccent">#FF4081</item>-->
+	  <item name="android:textCursorDrawable">@drawable/custom_cursor_style</item>
+	  <!-- Establecer el nuevo estilo para la línea -->
+	  <item name="android:editTextStyle">@style/CustomEntryStyle</item>
   </style>
+	<!-- Estilo personalizado para la línea -->
+	<style name="CustomEntryStyle" parent="android:Widget.EditText">
+		<item name="android:background">@drawable/custom_entry_style</item>
+	</style>
 </resources>
