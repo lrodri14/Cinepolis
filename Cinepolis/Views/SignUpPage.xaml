@@ -108,7 +108,13 @@
                     </Frame>
 
 
-                    <Button Text="Crear cuenta" BackgroundColor="#152567" TextColor="White" WidthRequest="300" HeightRequest="60" CornerRadius="30" />
+                    <Button Text="Crear cuenta" 
+                            BackgroundColor="#152567" 
+                            TextColor="White" 
+                            WidthRequest="300" 
+                            HeightRequest="60" 
+                            CornerRadius="30"
+                            Clicked ="SendCodeEmailClicked"/>
             </StackLayout>
                   </ScrollView>
             <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="2">

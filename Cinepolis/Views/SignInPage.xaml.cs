@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cinepolis.Views;
+using System;
 using Xamarin.Forms;
 
 
@@ -6,16 +7,16 @@ namespace Cinepolis
 {
     public partial class SignInPage : ContentPage
     {
-        private bool isPasswordVisible;
+        private bool isPasswordVisible; //
 
-        public string EyeImageSource => isPasswordVisible ? "eyehide.svg" : "eye.svg";
+        public string EyeImageSource => isPasswordVisible ? "eyehide.svg" : "eye.svg"; //
 
 
         public SignInPage()
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
-            isPasswordVisible = false;
+            isPasswordVisible = false; //
             BindingContext = this;
 
         }
@@ -24,7 +25,13 @@ namespace Cinepolis
         {
             await Navigation.PushAsync(new SignUpPage());
         }
-        private void TogglePasswordVisibility(object sender, EventArgs e)
+
+        private async void ForgotPasswordClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ForgotPasswordPage());
+        }
+
+        private void TogglePasswordVisibility(object sender, EventArgs e) //
         {
             // Lógica para alternar la visibilidad de la contraseña
             isPasswordVisible = !isPasswordVisible;
@@ -32,5 +39,9 @@ namespace Cinepolis
             OnPropertyChanged(nameof(EyeImageSource));
         }
 
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+
+        }
     }
 }

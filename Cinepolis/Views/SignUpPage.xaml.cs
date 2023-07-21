@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cinepolis.Views;
+using System;
 using Xamarin.Forms;
 
 namespace Cinepolis
@@ -37,6 +38,11 @@ namespace Cinepolis
             isPasswordVisibleC = !isPasswordVisibleC;
             passwordEntryC.IsPassword = !isPasswordVisibleC;
             OnPropertyChanged(nameof(EyeImageSourceC));
+        }
+
+        private async void SendCodeEmailClicked(object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new CodeSignUpPage());
         }
 
     }
