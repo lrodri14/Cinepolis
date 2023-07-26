@@ -12,6 +12,15 @@
                 <Setter Property="BackgroundColor" Value="White"/>
                 <Setter Property="TextColor" Value="Black" />
             </Style>
+            <Color x:Key="Primary">#212E5C</Color>
+            <Style x:Key="CarouselItemStyle" TargetType="Frame">
+                <Setter Property="HasShadow" Value="True" />
+                <Setter Property="CornerRadius" Value="5" />
+                <Setter Property="Margin" Value="20" />
+                <Setter Property="HeightRequest" Value="300" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

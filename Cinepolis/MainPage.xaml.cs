@@ -1,7 +1,8 @@
-﻿using System;
+﻿using Cinepolis.Views;
+using System;
 using Xamarin.Forms;
 
-namespace Cinepolis
+namespace Cinepolis.Views
 {
     public partial class MainPage : ContentPage
     {
@@ -21,6 +22,13 @@ namespace Cinepolis
         private async void OnSignUpButtonClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new SignUpPage());
+        }
+
+        private async void CarteleraButtonClicked(object sender, EventArgs e)
+        {
+    
+            Application.Current.MainPage = new AppShell();
+            
         }
     }
 }

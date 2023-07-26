@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cinepolis.Android", "Cinepo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cinepolis.iOS", "Cinepolis.iOS\Cinepolis.iOS.csproj", "{7D87BB17-6512-49D2-8826-5432A4348C8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cinepolis", "Cinepolis\Cinepolis.csproj", "{F6F98A01-2F27-4F5C-907C-2AAC4974584D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cinepolis", "Cinepolis\Cinepolis.csproj", "{F6F98A01-2F27-4F5C-907C-2AAC4974584D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

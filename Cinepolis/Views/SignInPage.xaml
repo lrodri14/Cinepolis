@@ -2,7 +2,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Cinepolis.SignInPage"
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
-             xmlns:local="clr-namespace:Cinepolis.Effects"
              >
     <ContentPage.Content>
         <StackLayout VerticalOptions="FillAndExpand">
@@ -39,7 +38,7 @@
                     </StackLayout>
                 </Frame>
                 <StackLayout HorizontalOptions="End">
-                    <Label Text="¿Olvidaste tu contraseña?" TextColor="Black" FontSize="16" HorizontalOptions="Center" Margin="0,0,0,10">
+                <Label Text="¿Olvidaste tu contraseña?" TextColor="Black" FontSize="16" HorizontalOptions="Center" Margin="0,0,0,10">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Tapped="ForgotPasswordClicked" />
                         </Label.GestureRecognizers>

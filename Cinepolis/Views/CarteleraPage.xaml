@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:ffimageloading="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             x:Class="Cinepolis.Views.CarteleraPage"
+             Title="Cartelera">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout >
+                <ffimageloading:SvgCachedImage Source="cinepolis.svg" Margin="10" HeightRequest="60" WidthRequest="200" VerticalOptions="Center" />
+                <BoxView Color="#000" HeightRequest="1" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <StackLayout Spacing="5" Padding="5">
+                <StackLayout HorizontalOptions="Start"  Padding="5">
+                <Label Text="Estrenos" TextColor="Black" FontSize="20" HorizontalOptions="Center" />
+            </StackLayout>
+            <Frame HasShadow="True" BorderColor="DarkGray" CornerRadius="10" Margin="5">
+                <!-- Aquí irá el CarouselView -->
+                <CarouselView ItemsSource="{Binding CarouselItems}"  PeekAreaInsets="100"   HeightRequest="200" VerticalOptions="Center">
+                    <CarouselView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Horizontal"
+                           ItemSpacing="10"/>
+                    </CarouselView.ItemsLayout>
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame HasShadow="True"
+                           BorderColor="DarkGray"
+                           CornerRadius="10"
+                           Margin="20"
+                           HeightRequest="200"
+                           Padding="15"
+                           HorizontalOptions="Center">
+                                <StackLayout>
+                                    <!-- Imagen -->
+                                    <Image Source="{Binding ImageSource}" Aspect="AspectFill"  HeightRequest="150" WidthRequest="150"  HorizontalOptions="Center" />
+                                    <!-- Nombre -->
+                                    <Label Text="{Binding Name}" FontSize="Medium" HorizontalOptions="Center" />
+                                </StackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+
+            </Frame>
+            <StackLayout HorizontalOptions="Start"  Padding="5">
+                <Label Text="Próximamente" TextColor="Black" FontSize="20" HorizontalOptions="Center" />
+            </StackLayout>
+            <Frame HasShadow="True" BorderColor="DarkGray" CornerRadius="10" Margin="5">
+                <!-- Aquí irá el CarouselView -->
+                <CarouselView ItemsSource="{Binding CarouselItems}"  PeekAreaInsets="100"   HeightRequest="200" VerticalOptions="Center">
+                    <CarouselView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Horizontal"
+                           ItemSpacing="10"/>
+                    </CarouselView.ItemsLayout>
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame HasShadow="True"
+                           BorderColor="DarkGray"
+                           CornerRadius="10"
+                           Margin="20"
+                           HeightRequest="200"
+                           Padding="15"
+                           HorizontalOptions="Center">
+                                <StackLayout>
+                                    <!-- Imagen -->
+                                    <Image Source="{Binding ImageSource}" Aspect="AspectFill"  HeightRequest="150" WidthRequest="150"  HorizontalOptions="Center" />
+                                    <!-- Nombre -->
+                                    <Label Text="{Binding Name}" FontSize="Medium" HorizontalOptions="Center" />
+                                </StackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+            </Frame>
+        </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -14,33 +14,34 @@ namespace Cinepolis.Views
 
     {
         private bool isPasswordVisible;
-        public string EyeImageSource => isPasswordVisible ? "eyehide.svg" : "eye.svg"; //
+        private bool isPasswordVisibleC;
+
+        public string EyeImageSource => isPasswordVisible ? "eyehide.svg" : "eye.svg";
+        public string EyeImageSourceC => isPasswordVisibleC ? "eyehide.svg" : "eye.svg";
 
 
         public ChangePasswordPage()
         {
             InitializeComponent();
-            isPasswordVisible = false; //
+            isPasswordVisible = false;
+            isPasswordVisibleC = false;
+            BindingContext = this;
         }
 
-        private void TogglePasswordVisibility(object sender, EventArgs e) //
+        private void TogglePasswordVisibility(object sender, EventArgs e)
         {
             // Lógica para alternar la visibilidad de la contraseña
             isPasswordVisible = !isPasswordVisible;
             passwordEntry.IsPassword = !isPasswordVisible;
             OnPropertyChanged(nameof(EyeImageSource));
         }
-
-        
-        private void TogglePasswordVisibility2(object sender, EventArgs e) //
+        private void TogglePasswordVisibilityC(object sender, EventArgs e)
         {
             // Lógica para alternar la visibilidad de la contraseña
-            isPasswordVisible = !isPasswordVisible;
-            passwordEntry2.IsPassword = !isPasswordVisible;
-            OnPropertyChanged(nameof(EyeImageSource));
+            isPasswordVisibleC = !isPasswordVisibleC;
+            passwordEntryC.IsPassword = !isPasswordVisibleC;
+            OnPropertyChanged(nameof(EyeImageSourceC));
         }
-
-        
 
 
         private async void ChangePasswordClicked(object sender, EventArgs e)
