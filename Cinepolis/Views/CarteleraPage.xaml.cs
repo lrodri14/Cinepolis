@@ -21,7 +21,7 @@ namespace Cinepolis.Views
         {
             InitializeComponent();
             Estrenos = new List<CarouselItem>{};
-            BindingContext = this;
+            //BindingContext = this;
         }
 
         protected override async void OnAppearing()
