@@ -35,7 +35,7 @@ namespace Cinepolis.Views
 
                 using (HttpClient httpClient = new HttpClient())
                 {
-                    httpClient.BaseAddress = new Uri("http://192.168.2.105:8000/");
+                    httpClient.BaseAddress = new Uri("http://64.227.10.233/");
                     httpClient.DefaultRequestHeaders.Accept.Clear();
                     httpClient.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
                     HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, "auth/verificacion");
@@ -48,7 +48,7 @@ namespace Cinepolis.Views
                         string token = responseObject?.data?.token;
                         if (!string.IsNullOrEmpty(token))
                         {
-                            await Navigation.PushAsync(new ForgotPasswordPage());
+                            Application.Current.MainPage = new AppShell();
                         }
 
                     }

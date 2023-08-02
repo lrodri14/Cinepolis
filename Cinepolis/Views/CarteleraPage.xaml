@@ -16,7 +16,7 @@
             </StackLayout>
             <Frame HasShadow="True" BorderColor="DarkGray" CornerRadius="10" Margin="5">
                 <!-- Aquí irá el CarouselView -->
-                <CarouselView ItemsSource="{Binding CarouselItems}"  PeekAreaInsets="100"   HeightRequest="200" VerticalOptions="Center">
+                <CarouselView ItemsSource="{Binding Estrenos}"  PeekAreaInsets="100"   HeightRequest="200" VerticalOptions="Center">
                     <CarouselView.ItemsLayout>
                         <LinearItemsLayout Orientation="Horizontal"
                            ItemSpacing="10"/>
@@ -34,7 +34,7 @@
                                     <!-- Imagen -->
                                     <Image Source="{Binding ImageSource}" Aspect="AspectFill"  HeightRequest="150" WidthRequest="150"  HorizontalOptions="Center" />
                                     <!-- Nombre -->
-                                    <Label Text="{Binding Name}" FontSize="Medium" HorizontalOptions="Center" />
+                                    <Label Text="{Binding Titulo}" FontSize="Medium" HorizontalOptions="Center" />
                                 </StackLayout>
                             </Frame>
                         </DataTemplate>
@@ -42,12 +42,11 @@
                 </CarouselView>
 
             </Frame>
-            <StackLayout HorizontalOptions="Start"  Padding="5">
+            <!--<StackLayout HorizontalOptions="Start"  Padding="5">
                 <Label Text="Próximamente" TextColor="Black" FontSize="20" HorizontalOptions="Center" />
-            </StackLayout>
-            <Frame HasShadow="True" BorderColor="DarkGray" CornerRadius="10" Margin="5">
-                <!-- Aquí irá el CarouselView -->
-                <CarouselView ItemsSource="{Binding CarouselItems}"  PeekAreaInsets="100"   HeightRequest="200" VerticalOptions="Center">
+            </StackLayout>-->
+            <!--<Frame HasShadow="True" BorderColor="DarkGray" CornerRadius="10" Margin="5">
+                <CarouselView ItemsSource="{Binding Proximamente}"  PeekAreaInsets="100"   HeightRequest="200" VerticalOptions="Center">
                     <CarouselView.ItemsLayout>
                         <LinearItemsLayout Orientation="Horizontal"
                            ItemSpacing="10"/>
@@ -62,16 +61,14 @@
                            Padding="15"
                            HorizontalOptions="Center">
                                 <StackLayout>
-                                    <!-- Imagen -->
                                     <Image Source="{Binding ImageSource}" Aspect="AspectFill"  HeightRequest="150" WidthRequest="150"  HorizontalOptions="Center" />
-                                    <!-- Nombre -->
                                     <Label Text="{Binding Name}" FontSize="Medium" HorizontalOptions="Center" />
                                 </StackLayout>
                             </Frame>
                         </DataTemplate>
                     </CarouselView.ItemTemplate>
                 </CarouselView>
-            </Frame>
+            </Frame>-->
         </StackLayout>
         </StackLayout>
     </ContentPage.Content>
