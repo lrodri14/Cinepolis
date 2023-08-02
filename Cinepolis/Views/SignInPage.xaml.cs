@@ -1,7 +1,7 @@
 ﻿using Cinepolis.Views;
 using System;
 using Xamarin.Forms;
-using Cinepolis.Servicios;
+//using Cinepolis.Servicios;
 using System.Net.Http;
 using Newtonsoft.Json;
 
@@ -62,7 +62,7 @@ namespace Cinepolis
                         string token = responseObject?.data?.token;
                         if (!string.IsNullOrEmpty(token))
                         {
-                            Application.Current.MainPage = new AppShell();
+                             await Navigation.PushAsync(new Location());
                         }
                     }
                     else

@@ -28,9 +28,6 @@
     <Compile Update="Views\CarteleraPage.xaml.cs">
       <DependentUpon>CarteleraPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\Home.xaml.cs">
-      <DependentUpon>Home.xaml</DependentUpon>
-    </Compile>
     <Compile Update="Views\SignInPage.xaml.cs">
       <DependentUpon>SignInPage.xaml</DependentUpon>
     </Compile>
@@ -47,7 +44,10 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Home.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Location.xaml">
+      <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\MovieViewPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
