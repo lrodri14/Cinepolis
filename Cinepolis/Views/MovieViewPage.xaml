@@ -16,7 +16,7 @@
             </Grid.RowDefinitions>
             <!-- Row 1: Image with gradient and icon -->
             <RelativeLayout Grid.Row="0">
-                <Image Source="movietest.jpg" Aspect="AspectFit" />
+                <Image Source="{Binding Imagen}" Aspect="AspectFit" />
                 <!-- Cambiar AspectFill a AspectFit -->
                 <BoxView BackgroundColor="Transparent"
              RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
@@ -37,25 +37,25 @@
 
             <!-- Row 2: Movie name and details -->
             <StackLayout Grid.Row="1" Margin="0,0,0,0">
-                <Label Text="Nombre de la película"
+                <Label 
                    BackgroundColor="#3b5998"
                    TextColor="White" FontSize="18" FontAttributes="Bold"
                    HorizontalTextAlignment="Center"
-                   HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" />
+                   HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Text="{Binding Titulo}" />
 
                 <!-- Margen para separar el nombre de la película de los labels -->
                 <StackLayout Orientation="Horizontal" Spacing="20" Margin="30,5,30,0">
-                    <Label Text="Clasificación: Clasificación de la película"
+                    <Label Text="{Binding Clasificacion}"
                            HorizontalTextAlignment="Center"
                            TextColor="#4f4f4f" FontSize="16"
                            HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
 
-                    <Label Text="Duración: Duración de la película"
+                    <Label Text="{Binding Duracion}"
                            HorizontalTextAlignment="Center"
                            TextColor="#4f4f4f" FontSize="16"
                            HorizontalOptions="CenterAndExpand" VerticalOptions="Center" />
 
-                    <Label Text="Género: Género de la película"
+                    <Label Text="{Binding Genero}"
                            HorizontalTextAlignment="Center"
                            TextColor="#4f4f4f" FontSize="16"
                            HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
@@ -75,7 +75,7 @@
                        TextColor="#4f4f4f" FontSize="18" FontAttributes="Bold"
                        HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
 
-                    <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel justo vel urna finibus rhoncus sit amet ut nulla. Vivamus a lectus nisi. Sed nec lectus odio."
+                    <Label Text="{Binding Sinopsis}"
                        TextColor="#4f4f4f" FontSize="16"
                        HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
                 </StackLayout>
@@ -86,7 +86,7 @@
                        TextColor="#4f4f4f" FontSize="18" FontAttributes="Bold"
                        HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
 
-                    <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                    <Label Text="{Binding Actores}"
                        TextColor="#4f4f4f" FontSize="16"
                        HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
                 </StackLayout>
@@ -98,29 +98,30 @@
                    HorizontalTextAlignment="Center"
                    HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" />
 
-                <Frame CornerRadius="10" HasShadow="True" Margin="20,0,20,0">
-                    <Grid Margin="10" RowSpacing="10">
-                        <!-- Ajusta el margen y el RowSpacing aquí para dar más espacio entre los elementos -->
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="Auto" />
-                        </Grid.ColumnDefinitions>
-
-                        <!-- Horario -->
-                        <Frame Grid.Column="0" BackgroundColor="White" CornerRadius="15" Padding="10" BorderColor="#3b5998" HasShadow="False">
-                            <Label x:Name="HorarioLabel" Text="Prueba" FontSize="18" TextColor="#4f4f4f" VerticalOptions="CenterAndExpand" />
-                        </Frame>
-
-                        <!-- Sala -->
-                        <Frame Grid.Column="1" BackgroundColor="White" CornerRadius="15" Padding="10" BorderColor="#3b5998" HasShadow="False">
-                            <Label x:Name="SalaLabel" Text="Prueba" FontSize="18" TextColor="#4f4f4f" VerticalOptions="CenterAndExpand" />
-                        </Frame>
-
-                        <!-- Botón para seleccionar -->
-                        <Button Grid.Column="2" Text="Seleccionar" Clicked="OnSeleccionarClicked" BackgroundColor="#3b5998" TextColor="White" FontSize="14" CornerRadius="15" Padding="10" />
-                    </Grid>
-                </Frame>
+                    <ListView ItemsSource="{Binding HorariosPelicula}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Frame BackgroundColor="White" CornerRadius="15" Padding="10" BorderColor="#3b5998" HasShadow="False" Margin="0,0,0,10">
+                                        <Grid ColumnSpacing="10">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="Auto" />
+                                            </Grid.RowDefinitions>
+                                            <Frame Grid.Column="0" BackgroundColor="White" CornerRadius="15" Padding="10" BorderColor="#3b5998" HasShadow="False">
+                                                <Label x:Name="HorarioLabel" Text="{Binding horainicio}" FontSize="18" TextColor="#4f4f4f" VerticalOptions="CenterAndExpand" />
+                                            </Frame>
+                                            <Frame Grid.Column="1" BackgroundColor="White" CornerRadius="15" Padding="10" BorderColor="#3b5998" HasShadow="False">
+                                                <Label x:Name="SalaLabel" Text="{Binding idsala}" FontSize="18" TextColor="#4f4f4f" VerticalOptions="CenterAndExpand" />
+                                            </Frame>
+                                            <Button Grid.Column="2" Text="Seleccionar" Clicked="OnSeleccionarClicked" BackgroundColor="#3b5998" TextColor="White" FontSize="14" CornerRadius="15" Padding="10" />
+                                        </Grid>
+                                    </Frame>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
 
             </StackLayout>
         </Grid>

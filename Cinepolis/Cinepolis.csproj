@@ -12,6 +12,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Servicios\**" />
+    <EmbeddedResource Remove="Servicios\**" />
+    <None Remove="Servicios\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Xamarin.CommunityToolkit" Version="2.0.6" />
     <PackageReference Include="Xamarin.FFImageLoading.Svg" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms" Version="2.4.11.982" />
@@ -67,8 +73,5 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="Servicios\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Servicios\" />
   </ItemGroup>
 </Project>

@@ -15,7 +15,6 @@ namespace Cinepolis.Views
         public Home()
         {
             InitializeComponent();
-            Console.WriteLine("Holaaaaa!");
         }
     }
 }
