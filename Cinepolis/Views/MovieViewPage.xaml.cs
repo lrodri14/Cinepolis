@@ -80,7 +80,6 @@ namespace Cinepolis.Views
 
                         if(horarioArray != null)
                         {
-                      
                             foreach (var horario in horarioArray)
                             {
                                 int idSala = (int)horario["sala"]["id"];
