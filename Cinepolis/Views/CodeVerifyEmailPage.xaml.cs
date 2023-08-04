@@ -48,7 +48,7 @@ namespace Cinepolis.Views
                         string token = responseObject?.data?.token;
                         if (!string.IsNullOrEmpty(token))
                         {
-                            Application.Current.MainPage = new AppShell();
+                            await Navigation.PushAsync(new Location());
                         }
 
                     }
