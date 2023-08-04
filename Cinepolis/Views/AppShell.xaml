@@ -25,8 +25,8 @@
     <TabBar>
         <ShellContent Title="Home" Icon="Home.png" ContentTemplate="{DataTemplate local:Home}" />
         <ShellContent Title="Cartelera" Icon="Cartelera.png" ContentTemplate="{DataTemplate local:CarteleraPage}" />
-        <ShellContent Title="Confitería" Icon="Confiteria.png" Route="Home" ContentTemplate="{DataTemplate local:CarteleraPage}" />
-        <ShellContent Title="Perlfil" Icon="Perfil_usu.png" ContentTemplate="{DataTemplate local:CarteleraPage}" />
+        <ShellContent Title="Confitería" Icon="Confiteria.png" Route="Home" ContentTemplate="{DataTemplate local:ConfiteriaPage}" />
+        <ShellContent Title="Perlfil" Icon="Perfil_usu.png" ContentTemplate="{DataTemplate local:UserProfilePage}" />
     </TabBar>
 
 </Shell>
